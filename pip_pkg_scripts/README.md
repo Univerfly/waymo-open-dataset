@@ -25,6 +25,6 @@ export PYTHON_VERSION=3
 export PYTHON_MINOR_VERSION=9
 export PIP_MANYLINUX2010=0
 # Only support 2.4.0, 2.5.0, 2.6.0, 2.10.0, 2.11.0
-export TF_VERSION=2.11.0
+export TF_VERSION=2.6.0
 ./pip_pkg_scripts/build.sh
 ```

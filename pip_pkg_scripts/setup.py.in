@@ -13,7 +13,7 @@
 # limitations under the License.
 # ==============================================================================
 """Setup script for pip package."""
-from setuptools import find_packages
+from setuptools import find_namespace_packages
 from setuptools import setup
 from setuptools.command.install import install
 from setuptools.dist import Distribution
@@ -27,9 +27,9 @@ REQUIRED_PACKAGES = [
     'scikit-image>=0.17.2',
     'immutabledict>=2.0.0',
     'scipy>=1.9.3',
-    'absl-py>=1.0.0',
+    'absl-py~=0.15.0',
     'pyarrow>=10.0.0',
-    'dask>=2022.11.1',
+    'dask~=2022.11.1',
     'pandas>=1.1.5',
     'tensorflow-probability'
 ]
@@ -63,7 +63,7 @@ setup(
     author='Waymo Open Dataset Authors',
     author_email='waymo-open-dataset@google.com',
     url='https://waymo.com/open',
-    packages=find_packages(include=['waymo_open_dataset*'], exclude=[]),
+    packages=find_namespace_packages(include=['waymo_open_dataset*'], exclude=[]),
     include_package_data=True,
     python_requires='>=3',
     install_requires=REQUIRED_PACKAGES,

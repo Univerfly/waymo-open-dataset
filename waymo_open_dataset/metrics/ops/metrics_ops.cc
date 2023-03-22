@@ -234,7 +234,7 @@ REGISTER_OP("Match")
       for (int i = 0; i < 4; ++i) {
         c->set_output(i, c->MakeShape({-1}));
       }
-      return ::tensorflow::OkStatus();
+      return ::tensorflow::Status();
     }).Doc(R"doc(
 Computes bipartite matching between prediction and groundtruth objects.
 
